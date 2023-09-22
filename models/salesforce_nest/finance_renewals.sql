@@ -36,3 +36,4 @@ all_opportunities_joined as (
 
 select *
 from all_opportunities_joined
+order by account_name asc, opp_name asc
