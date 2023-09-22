@@ -1,0 +1,29 @@
+version: 2
+
+models:
+    - name: clients
+      description: "A model that normalizes the salesforce Accounts object, bringing in all clients"
+      columns:
+          - name: sfdc_id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+    - name: finance_renewals
+      description: "A model that pulls in opps for all clients"
+      columns:
+          - name: opp_sdc_id
+            description: "The pimary key"
+            tests:
+                - unique
+                - not_null
+    - name: churn_events
+      description: "A model that has all the churn events at Nava"
+      columns:
+          - name: churn_reason
+            description: "Check if churn reason is in accepted values"
+            tests:
+                - accepted_values:
+                    values: ['Service','Mergers & Acquisitions','Company Dissolved','PEO Transition','Medicare Transition','No Longer a Fit','Switched to Competitor','Limiting Benefits','Lost to Competitor','Lost to Former Nava Partner']
+
+        
