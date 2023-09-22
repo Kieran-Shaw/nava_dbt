@@ -33,3 +33,4 @@ churned_clients as (
 
 select *
 from churned_clients
+order by account_name asc

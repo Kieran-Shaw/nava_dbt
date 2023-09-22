@@ -44,3 +44,4 @@ clean_clients_information as (
 
 select *
 from clean_clients_information
+order by account_name asc

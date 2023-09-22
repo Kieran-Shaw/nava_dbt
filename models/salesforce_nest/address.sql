@@ -45,3 +45,4 @@ select
     ) as full_billing_address
 
 from accounts_addresses
+order by account_name asc

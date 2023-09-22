@@ -25,3 +25,4 @@ with users_salesforce_raw as (
 
 select *
 from users_salesforce_raw
+order by last_name asc
