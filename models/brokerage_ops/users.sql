@@ -4,7 +4,7 @@ This users view is important for maintaining an accurate user list of people wit
 Any time someone is added to SF users table (ex, new partner), we can expect that person to be added to the nest users table.
 I am thinking of having a different namespace for the airtable information, and then using dbt to pull the information in to the public schema / namespace
 */
-{{ config(materialized="table") }}
+{{ config(materialized="view",sort="last_name") }}
 
 with
     user_normalized as (
