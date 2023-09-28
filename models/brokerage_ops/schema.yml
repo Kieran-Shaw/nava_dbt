@@ -25,5 +25,3 @@ models:
             tests:
                 - accepted_values:
                     values: ['Service','Mergers & Acquisitions','Company Dissolved','PEO Transition','Medicare Transition','No Longer a Fit','Switched to Competitor','Limiting Benefits','Lost to Competitor','Lost to Former Nava Partner']
-
-        
